@@ -5,8 +5,11 @@ import Signup from './Pages/Signup';
 import Home from './Pages/Home';
 import Login from './Pages/Login'
 import Create from './Pages/Create'
+import ViewPost from './Pages/ViewPost'
 import {AuthContext, FirebaseContext} from './store/Context'
 import { getAuth,onAuthStateChanged } from 'firebase/auth';
+
+import Post from './store/PostContext'
 
 
 
@@ -30,12 +33,15 @@ function App() {
 
   return (
     <BrowserRouter>
+    <Post> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/create" element={<Create/>} />
+        <Route path="/view" element={<ViewPost/>} />
       </Routes>
+    </Post>
     </BrowserRouter>
   );
 }
