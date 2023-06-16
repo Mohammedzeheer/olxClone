@@ -74,7 +74,7 @@ const Create = () => {
             <br />
           {/* </form> */}
           <br />
-          <img alt="Posts" width="200px" height="200px" src={image ? URL.createObjectURL(image):''}></img>
+          <img alt="Posts" width="200px" height="170px" src={image ? URL.createObjectURL(image):''}></img>
           {/* <form> */}
             <br />
             <input type="file" onChange={(e)=>setImage(e.target.files[0])} />

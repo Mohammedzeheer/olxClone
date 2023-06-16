@@ -62,10 +62,6 @@ export default function Signup() {
     
   };
   
-  const loginUser=()=>{
-    navigate('/login');
-  }
-  
 
   return (
     <div>
@@ -124,7 +120,7 @@ export default function Signup() {
           <button>Signup</button>
         </form>
        
-         <button onClick={loginUser}>Login</button>
+         <a onClick={()=>navigate('/login')}>Login</a>
       </div>
     </div>
   );
