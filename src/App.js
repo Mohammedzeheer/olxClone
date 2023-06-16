@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Signup from './Pages/Signup';
 import Home from './Pages/Home';
 import Login from './Pages/Login'
+import Create from './Pages/Create'
 import {AuthContext, FirebaseContext} from './store/Context'
 import { getAuth,onAuthStateChanged } from 'firebase/auth';
 
@@ -12,10 +13,10 @@ import { getAuth,onAuthStateChanged } from 'firebase/auth';
 function App() {
     const {setUser} =useContext(AuthContext)
     const {Firebase}=useContext(FirebaseContext)
-    const {auth}=getAuth(Firebase)
+     const auth=getAuth(Firebase)
 
     useEffect(()=>{
-      const auth = getAuth();
+      // const auth = getAuth();
       
       onAuthStateChanged(auth, (user) => {
         if (user) {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/create" element={<Create/>} />
       </Routes>
     </BrowserRouter>
   );
