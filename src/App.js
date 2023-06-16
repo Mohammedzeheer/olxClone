@@ -9,7 +9,7 @@ import ViewPost from './Pages/ViewPost'
 import {AuthContext, FirebaseContext} from './store/Context'
 import { getAuth,onAuthStateChanged } from 'firebase/auth';
 
-import Post from './store/PostContext'
+import Post from './store/postContext'
 
 
 

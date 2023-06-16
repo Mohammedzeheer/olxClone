@@ -56,7 +56,9 @@ function Header() {
           <Arrow></Arrow>
         </div>
         <div className="loginPage">
-          <span>{user ? user.displayName: 'Login'}</span>
+          {/* <span onClick={Navigate('/login')}>{user ? user.displayName: 'Login'}</span> */}
+          {user?<span className='header-login'>{user?user.displayName:"Login"}</span>:<span className='header-login' onClick={()=>{Navigate('/login')}}>{user?user.displayName:"Login"}</span>}       
+        
           <hr />
         </div>
 
@@ -66,7 +68,8 @@ function Header() {
           <SellButton></SellButton>
           <div className="sellMenuContent">
             <SellButtonPlus></SellButtonPlus>
-            <span>SELL</span>
+            <span onClick={()=>{Navigate('/create')}}>SELL </span>
+            {/* <span>SELL</span> */}
           </div>
         </div>
       </div>

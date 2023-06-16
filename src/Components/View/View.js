@@ -1,14 +1,15 @@
 import React,{useContext,useState,useEffect} from 'react';
 import './View.css';
-import { PostContext } from '../../store/PostContext';
+import { PostContext } from '../../store/postContext';
 import { FirebaseContext } from '../../store/Context';
 import { collection, query, where, getDocs } from "firebase/firestore";
+
 
 function View() {
   const [userDetails,setUserDetails]=useState()
   const {postDetails}= useContext(PostContext)
-  const {Firebase}=useContext(FirebaseContext)
-  const db=useContext(Firebase)
+  const {db}=useContext(FirebaseContext)
+  // const db=useContext(Firebase)
 
   useEffect(()=>{
 
@@ -29,7 +30,7 @@ function View() {
   return (
     <div className="viewParentDiv">
       <div className="imageShowDiv">
-        <img
+        <img 
           src={postDetails?postDetails.imageUrl:""}
           alt=""
         />
