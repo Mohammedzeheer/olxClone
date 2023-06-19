@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router';
 
 import Logo from '../../olx-logo.png';
 import './Signup.css';
-import {FirebaseContext} from '../../store/FirebaseContext';
+import {FirebaseContext} from '../../store/Context';
 
 
 export default function Signup() {
